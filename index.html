@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div id="main_div">
+
+    <div id="password_input_group">
+        <input id="password_input" class="text_fields" type="password">
+        <label  id='eye' class="checkbox_span"><input type="checkbox" id="eye_checkbox">👁</label>
+    </div>
+
+    <div id="entropy_slider_bg">
+         <div id="entropy_slider"></div>
+    </div>
+    
+
+    <div id="info_and_buttons">
+
+        <div id="info_div">
+            <p><span>Password quality: </span><span id="password_quality"></span></p>
+            <p>Entropy: <b><span id="entropy_value"></span></b></p>
+            <p id="password_quality_bar"></p>
+            <p>Characters: <b><span id="password_char_length"></span></b></p>
+        </div>
+
+        <div id="buttons_div">
+            <button id="refresh_button" onclick="main()" class="button_big">⟳</button>
+            <button id="clipboard_button" onclick="copy_to_clipboard()" class="button_big">📋</button>
+            <p id="clipboard_warning" visibility="hidden">Copied</p>
+        </div>
+        
+    </div>
+
+    <div id="length_div">
+        <label>Length: </label>
+        <input type="range" id="password_length_slider" min="1" max="128" value="8">
+        <div id="password_length_group">
+            <input id="password_length" type="number" min="1" value="8" class="text_fields">
+            <div id="increase_decrease_length">
+                <button id="button_up" onclick="up_button()">▲</button>
+                <button id="button_down" onclick="down_button()">▼</button>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div id="properties">
+        <div id="char_types">
+            <label class="checkbox_span"><input type="checkbox" id="upper_letters">A-Z</label>
+            <label class="checkbox_span"><input type="checkbox" id="lower_letters" checked>a-z</label>
+            <label class="checkbox_span"><input type="checkbox" id="numbers">0-9</label>
+            <label class="checkbox_span"><input type="checkbox" id="logograms"># $ % & @ ^ ` ~</label>
+            <label class="checkbox_span"><input type="checkbox" id="extended_ascii">Extended ASCII</label>
+            <label class="checkbox_span"><input type="checkbox" id="ponctuation">.,:;</label>
+            <label class="checkbox_span"><input type="checkbox" id="quotes">"'</label>
+            <label class="checkbox_span"><input type="checkbox" id="slashes">\/|_-</label>
+            <label class="checkbox_span"><input type="checkbox" id="math_symbols">&lt;&gt;*+!?=</label>
+            <label class="checkbox_span"><input type="checkbox" id="parentheses">{[()]}</label>
+            <label class="checkbox_span"><input type="checkbox" id="cjk">中日韓</label><br><br>
+
+            <label for="extra_chars">Also include:</label><br>
+            <input id="extra_chars" class="text_fields"><br><br>
+            <label for="excluded_chars">Do not include:</label><br>
+            <input id="excluded_chars" class="text_fields"><br><br>
+            <label class="checkbox_span"><input id="exclude_similar" type="checkbox">Exclude similar characters</label>
+            <label class="checkbox_span"><input id="use_all_groups" type="checkbox">Use characters from all groups</label>
+        </div>
+    </div>
+</div>
+    <script src="./script.js"></script>
+
+</body>
+</html>

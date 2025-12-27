@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(12, 12, 12);
+    color: rgb(194, 194, 194);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+}
+
+#main_div{
+    max-width: 450px;
+    background-color: rgb(3, 0, 43);
+    border: 1px solid rgb(194, 194, 194);
+    padding: 20px;
+    border-radius: 6px;
+}
+
+#clipboard_warning{
+    user-select: none;
+    margin-bottom: 15px;
+    margin-top: 0;
+    height: 1rem;
+    opacity: 0;
+    transition-timing-function: ease;
+}
+
+.inactive_refresh{
+    background-color: rgb(29, 29, 29);
+}
+
+input{
+    width: 100%;
+    background-color: rgb(12, 12, 12);
+    color: rgb(194, 194, 194);;
+    border-radius: 6px;
+    font-family: monospace;
+}
+
+button{
+    user-select: none;
+    margin-top: 4px;
+    width: 3ch;
+    height: 3ch;
+    background-color: rgb(12, 12, 12);
+    color: rgb(194, 194, 194);
+    border-radius: 6px;
+}
+
+#entropy_slider_bg{
+    width: 100%;
+    background-color: rgb(32, 32, 32);
+    padding: 0;
+    margin: 4px 0px;
+    height: 0.5rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+
+#entropy_slider{
+    width: 45%;
+    background-color: rgb(241, 0, 0);
+    padding: 0;
+    margin: 4px 0px;
+    height: 0.5rem;
+    border-radius: 6px;
+}
+
+#show_password_button{
+    margin: 0;
+    font-size: 1.27rem;
+    border-radius: 0 6px 6px 0;
+}
+
+.button_big{
+    font-size: 2rem;
+}
+
+label {
+    white-space: nowrap;
+}
+
+.text_fields{
+    font-size: 1.5rem;
+    /* width: 100%; */
+}
+
+#length_div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+#password_length_group{
+    display: flex;
+}
+
+#password_length_slider {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+#password_length{
+    width: 6ch;
+    margin-right: 0;
+    border-radius: 6px 0 0 6px;
+}
+
+#password_input{
+    flex-grow: 1;
+    border-radius: 6px 0 0 6px;
+}
+
+#password_input_group{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#increase_decrease_length{
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#increase_decrease_length button{
+    font-size: 0.75rem;
+    margin: 0px;
+    border-left: 0;
+}
+
+#button_up{
+    border-radius: 0 6px 0 0;
+    border-bottom: 0;
+}
+
+#button_down{
+    border-radius: 0 0 6px 0;
+    border-top: 0;
+}
+
+input:focus {
+    outline: none;
+    border-color: rgb(36, 145, 235);
+}
+
+#buttons_div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#info_and_buttons{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#eye{
+    line-height: 1;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: left;
+    border-radius: 0 6px 6px 0;
+    background-color: rgb(12, 12, 12);
+    border-left: 0;
+    color: rgb(100, 100, 100);
+}
+
+#eye:has(input:checked) {
+    background: rgb(0, 60, 109);
+    color: rgb(255, 255, 255);
+}
+
+.checkbox_span {
+    font-family: monospace;
+    margin: 2px 0px;
+    white-space: nowrap;
+    border: 1px solid rgb(194, 194, 194);
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.2s;
+    user-select: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.checkbox_span input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox_span:has(input:checked) {
+    background: rgb(0, 60, 109);
+    color: rgb(255, 255, 255);
+}
+
+.checkbox_span:hover {
+    background: rgba(0, 255, 255, 0.1);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.very_weak{
+    color: rgb(239, 68, 68);
+    font-weight: bolder;
+}
+.weak{
+    color: rgb(251, 146, 60);
+    font-weight: bolder;
+}
+.fair{
+    color: rgb(234, 179, 8);
+    font-weight: bolder;
+}
+.strong{
+    color: rgb(132, 204, 22);
+    font-weight: bolder;
+}
+.very_strong{
+    color: rgb(34, 197, 94);
+    font-weight: bolder;
+}
